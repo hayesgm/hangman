@@ -3,7 +3,7 @@ defmodule Hangman do
 
   # Client
 
-  def start_link(word \\ "apple", letters \\ []) do
+  def start_link(word, letters \\ []) do
     GenStateMachine.start_link(Hangman, {:start, %{word: word, letters: letters}})
   end
 
